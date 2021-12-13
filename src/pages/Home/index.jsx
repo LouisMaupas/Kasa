@@ -39,11 +39,8 @@ export default class Home extends Component {
           <Thumbnails name={elt.title} ></Thumbnails>
         </Link>)
       :
-        <p>non</p>
+        <p>Erreur serveur lors du chargement des logements.</p>
         }
-
-        {/*  */}
-
       </div>
     )
   }
