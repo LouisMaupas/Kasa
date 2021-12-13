@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import '../Styles/components/_header.scss'
+// img
 import logo from '../img/logo.PNG'
 import banner from '../img/banner.svg'
+// style sheet
+import '../Styles/components/_header.scss'
 
 export default class Header extends Component {
     render() {

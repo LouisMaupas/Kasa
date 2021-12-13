@@ -4,7 +4,8 @@ import Header from './components/header'
 import notFound from './pages/NotFound'
 import About from './pages/About'
 import Lodging from './pages/Lodging'
-
+// style sheet
+import './App.scss'
 
 function App() {
     return(
