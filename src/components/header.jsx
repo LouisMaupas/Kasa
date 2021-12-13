@@ -7,8 +7,8 @@ import banner from '../img/banner.svg'
 export default class Header extends Component {
     render() {
         return (
-            <div className='header'>
-                <div className='d-flex'>
+            <div>
+                <div className='d-flex justify-content-between'>
                     <img className='header__logo' src={logo} alt='Logo' />
                     <nav>
                         <Link to="/">Accueil</Link>
