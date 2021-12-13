@@ -11,7 +11,9 @@ export default class Header extends Component {
         return (
             <div>
                 <div className='d-flex justify-content-between'>
-                    <img className='header__logo' src={logo} alt='Logo' />
+                    <Link to="/">
+                        <img className='header__logo' src={logo} alt='Logo' />
+                    </Link>
                     <nav>
                         <Link to="/">Accueil</Link>
                         <Link to="/about">A propos</Link>
