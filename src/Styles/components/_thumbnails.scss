@@ -1,0 +1,18 @@
+.Thumbnail {
+    width: 340px;
+    height: 340px;
+    border-radius: 10px;
+    background: linear-gradient(#FF6060 60%, #000);
+} 
+
+.main-display > a {
+    color: white;
+    text-decoration: none;
+}
+
+.Thumbnail__title {
+    margin: 1rem;
+    position: relative;
+    top: 85%;
+    left: 5%;
+}
