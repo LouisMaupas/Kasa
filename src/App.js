@@ -5,6 +5,7 @@ import notFound from './pages/NotFound'
 import About from './pages/About'
 import Lodging from './pages/Lodging'
 
+
 function App() {
     return(
         <div className="App">
