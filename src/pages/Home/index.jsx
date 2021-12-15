@@ -3,7 +3,7 @@ import data from '../../backend/data.json'
 import Thumbnails from '../../components/Thumbnails'
 import {Link} from "react-router-dom";
 // img
-import banner from '../../img/banner.svg'
+import banner from '../../img/banner.jpg'
 // style sheet
 import '../../Styles/pages/home.scss'
 

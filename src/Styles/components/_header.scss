@@ -1,3 +1,13 @@
 .header__logo {
     width: 150px;
 }
+
+#wrapper-header {
+    margin-top: 40px;
+}
+
+.header__nav {
+    width: 320px;
+    display: flex;
+    justify-content: space-between;
+}

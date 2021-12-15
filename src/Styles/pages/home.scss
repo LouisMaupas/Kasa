@@ -12,5 +12,8 @@
 .banner {
     text-align: center;
     margin: 60px 0 43px 0;
+    > img {
+        object-fit: fill;
+    }
 }
 

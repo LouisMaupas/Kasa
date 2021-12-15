@@ -8,12 +8,12 @@ import '../Styles/components/_header.scss'
 export default class Header extends Component {
     render() {
         return (
-            <div className='wrapper'>
+            <div className='wrapper' id='wrapper-header'>
                 <div className='d-flex justify-content-between'>
                     <Link to="/">
                         <img className='header__logo' src={logo} alt='Logo' />
                     </Link>
-                    <nav>
+                    <nav className='header__nav'>
                         <Link to="/">Accueil</Link>
                         <Link to="/about">A propos</Link>
                     </nav>  
