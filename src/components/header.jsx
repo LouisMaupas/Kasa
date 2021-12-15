@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink  } from 'react-router-dom'
 // img
 import logo from '../img/logo.PNG'
 // style sheet
@@ -14,8 +14,8 @@ export default class Header extends Component {
                         <img className='header__logo' src={logo} alt='Logo' />
                     </Link>
                     <nav className='header__nav'>
-                        <Link to="/">Accueil</Link>
-                        <Link to="/about">A propos</Link>
+                        <NavLink  to="/">Accueil</NavLink >
+                        <NavLink  to="/about">A propos</NavLink >
                     </nav>  
                 </div>
             </div>
