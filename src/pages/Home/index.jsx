@@ -2,6 +2,8 @@ import { Component } from 'react'
 import data from '../../backend/data.json'
 import Thumbnails from '../../components/Thumbnails'
 import {Link} from "react-router-dom";
+// img
+import banner from '../../img/banner.svg'
 // style sheet
 import '../../Styles/pages/home.scss'
 
@@ -31,17 +33,27 @@ export default class Home extends Component {
     const data = this.state.accomodation
 
     return (
-      <div className='main-display'>
+      <div className='wrapper'>
+        <div className='banner'>
+          <img src={banner} alt='banner' />
+        </div>
 
-        {data.length>0?
-        data.map(elt => 
-        <Link key={`lodging-${elt.id}`} to={`/lodging/${elt.id}`}>
-          <Thumbnails name={elt.title} ></Thumbnails>
-        </Link>)
-      :
-        <p>Erreur serveur lors du chargement des logements.</p>
-        }
+        <div className='main-display'>
+          {data.length>0?
+          data.map(elt => 
+          <Link className='thumbnail' key={`lodging-${elt.id}`} to={`/lodging/${elt.id}`}>
+            <Thumbnails name={elt.title} ></Thumbnails>
+          </Link>)
+          :
+          <p>Erreur serveur lors du chargement des logements.</p>
+          }
+        </div>
+
       </div>
+
+
+
+
     )
   }
 

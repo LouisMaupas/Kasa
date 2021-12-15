@@ -1,0 +1,16 @@
+.main-display {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #F6F6F6;
+    border-radius: 20px;
+    > a {
+        margin: 30px;
+    }
+}
+
+.banner {
+    text-align: center;
+    margin: 60px 0 43px 0;
+}
+
