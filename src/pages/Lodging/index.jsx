@@ -27,9 +27,23 @@ export default class Error extends Component {
     
     
       render() {
+        const data = this.state.accomodation
+        let lodgingData = {}
+        if (data.length) {
+          for (let lodging of data) {
+            lodging.id === this.state.id.slice(1) ? lodgingData = lodging : console.log('pass')
+          }
+        }
+        console.log(lodgingData)
+
         return (
           <div>
-              <h1>Logement n°{this.state.id}</h1>
+              <h1>{lodgingData.title}</h1>
+              <h2>{lodgingData.location}</h2>
+              <div>{lodgingData.tags}</div>
+              <div>{lodgingData.description}</div>
+              <div>{lodgingData.equipments}</div>
+              <div>{lodgingData.rating}</div>
           </div>
         )
       }
