@@ -4,9 +4,12 @@ import React, { Component } from 'react'
 export default class Equipments extends Component {
     render() {
         const equipmentsArray = this.props.equipments
+        console.log(equipmentsArray)
         return (
             <div>
-                {equipmentsArray}
+                {equipmentsArray.map((equipment, index) => (
+                    <li key={index}>{equipment}</li>
+                ))}
             </div>
         )
     }
