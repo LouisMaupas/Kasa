@@ -3,8 +3,7 @@ import data from '../../backend/data.json'
 import Thumbnails from '../../components/Thumbnails'
 import {Link} from "react-router-dom";
 // img
-import banner from '../../img/banner.jpg';
-import banner_mobile from '../../img/banner_mobile.PNG'
+import banner from '../../img/banner.png';
 // style sheet
 import '../../Styles/pages/home.scss'
 
@@ -13,9 +12,7 @@ export default class Home extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      accomodation: {},
-      mobile: window.matchMedia("(max-width: 705px)").matches,
-      desktop : window.matchMedia("(min-width: 1415px)").matches
+      accomodation: {}
     }
   }
 
@@ -38,10 +35,8 @@ export default class Home extends Component {
     return (
       <div className='wrapper'>
         <div className='banner'>
-          {this.state.mobile && (<img src={banner_mobile} alt='banner' />)}
-           {/* espace non sécable */}
-          <div>Chez&nbsp;vous partout&nbsp;et&nbsp;aillerus.</div>
-          {this.state.desktop && (<img src={banner} alt='banner' />)}
+          <div className='banner__text'>Chez&nbsp;vous, partout&nbsp;et&nbsp;ailleurs.</div>
+          <img src={banner} alt='banner' />
         </div>
 
         <div className='main-display'>
