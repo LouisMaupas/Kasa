@@ -39,6 +39,8 @@ export default class Home extends Component {
       <div className='wrapper'>
         <div className='banner'>
           {this.state.mobile && (<img src={banner_mobile} alt='banner' />)}
+           {/* espace non sécable */}
+          <div>Chez&nbsp;vous partout&nbsp;et&nbsp;aillerus.</div>
           {this.state.desktop && (<img src={banner} alt='banner' />)}
         </div>
 

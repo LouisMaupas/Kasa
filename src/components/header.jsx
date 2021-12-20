@@ -14,7 +14,7 @@ export default class Header extends Component {
                         <img className='header__logo' src={logo} alt='Logo' />
                     </Link>
                     <nav className='header__nav'>
-                        <NavLink  to="/">Accueil</NavLink >
+                        <NavLink  to="/" exact>Accueil</NavLink >
                         <NavLink  to="/about">A propos</NavLink >
                     </nav>  
                 </div>
