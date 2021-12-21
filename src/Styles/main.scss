@@ -1,0 +1,18 @@
+// utils : need to be call first
+@import './Styles/utils/variables';
+
+// base
+@import './Styles/base/bases';
+@import './Styles/base/typography';
+
+// components
+@import './Styles/components/footer';
+@import './Styles/components/header';
+@import './Styles/components/thumbnails';
+@import './Styles/components/dropdown';
+
+// MyClass
+@import './Styles/myClass/myClass.scss';
+
+// Pages
+@import './Styles/pages/home.scss';

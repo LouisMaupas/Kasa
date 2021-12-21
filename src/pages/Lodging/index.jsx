@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import data from '../../backend/data.json'
-import Equipments from '../../components/Equipments'
+import Dropdown from '../../components/Dropdown'
 
 export default class Error extends Component {
 
@@ -42,8 +42,8 @@ export default class Error extends Component {
               <h1>{lodgingData.title}</h1>
               <h2>{lodgingData.location}</h2>
               <div>{lodgingData.tags}</div>
-              <div>{lodgingData.description}</div>
-              <Equipments equipments={lodgingData.equipments} ></Equipments>
+              <Dropdown title='Description'  content={lodgingData.description} ></Dropdown>
+              <Dropdown title='Équipements'  content={lodgingData.equipments} ></Dropdown>
               <div>{lodgingData.rating}</div>
           </div>
         )
