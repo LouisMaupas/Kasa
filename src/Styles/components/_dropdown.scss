@@ -8,3 +8,12 @@
     height: 52px;
     border-radius: 10px;
 }
+
+.dropdown__trigger {
+    cursor: pointer;
+}
+
+.dropdown__content {
+    background-color: #f6f6f6;
+    width: 100%;
+}

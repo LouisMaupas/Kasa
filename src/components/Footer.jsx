@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 // img
-import logo from '../img/logo alt.PNG'
+import logo from '../img/logo_alt.PNG'
 // style sheet
 import '../Styles/components/_footer.scss'
 
