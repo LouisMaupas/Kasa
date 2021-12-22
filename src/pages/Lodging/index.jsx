@@ -25,8 +25,6 @@ export default class Error extends Component {
          })
      }
     
-    
-    
       render() {
         const data = this.state.accomodation
         let lodgingData = {}
@@ -35,8 +33,6 @@ export default class Error extends Component {
             lodging.id === this.state.id.slice(1) ? lodgingData = lodging : console.log('pass')
           }
         }
-        console.log(lodgingData)
-
         return (
           <div>
               <h1>{lodgingData.title}</h1>

@@ -10,9 +10,10 @@ export default class Dropdown extends Component {
 
     render() {
         const content = this.props.content
+        console.log(content)
         const dropdownTitle = this.props.title
         
-        function dropdownTrigger(e) {
+        function triggerDropdown(e) {
             const currentDropdown = e.target.parentNode.parentNode.children[1]
             if (currentDropdown.classList.contains('d-none')) {
                 currentDropdown.classList.remove('d-none')
@@ -21,18 +22,36 @@ export default class Dropdown extends Component {
             }
         }
 
+        let list 
+        if (typeof content === 'object') {
+                   return list = content.map((item) =>
+                    <li>{item}</li>
+                    );
+        }
+
+
         return (
             <div className='dropdown'>
                 <div className='dropdown__header d-flex justify-content-between align-items-center'>
                     <span>
                        {dropdownTitle}  
                     </span>
-                   <div onClick={dropdownTrigger} className='dropdown__trigger dropdown__trigger--closed'>
+                   <div onClick={triggerDropdown} className='dropdown__trigger dropdown__trigger--closed'>
                        ^
                    </div>
                 </div>
-                <div className='dropdown__content type- d-none'>
-                    {content}
+                <div className={`dropdown__content d-none`}>
+
+                    {typeof(content) === 'object' ?
+                    <ul>
+                        {list}
+                    </ul>
+                    :
+                    <div>
+                        {content}
+                    </div>
+                    }
+
                 </div>
             </div>
         )
