@@ -12,14 +12,30 @@
 .banner {
     text-align: center;
     margin: 60px 0 43px 0;
+    position: relative;
+    width: 100%;
+    &__text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 48px;
+    }
     > img {
-        object-fit: fill;
-    border-radius: 25px;
-
+        min-width: 0;
+        object-fit: contain;
+        border-radius: 25px;
     }
 }
 
 /* Mobile */
 @media (max-width: 705px) {
+    .banner {
+        height: 111px;
+        &__text {
+            font-size: 24px;
+        }
+    }
 }
 

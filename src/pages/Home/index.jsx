@@ -36,7 +36,7 @@ export default class Home extends Component {
       <div className='wrapper'>
         <div className='banner'>
           <div className='banner__text'>Chez&nbsp;vous, partout&nbsp;et&nbsp;ailleurs.</div>
-          <img src={banner} alt='banner' />
+          <img className='banner__img' src={banner} alt='banner' />
         </div>
 
         <div className='main-display'>
@@ -51,10 +51,6 @@ export default class Home extends Component {
         </div>
 
       </div>
-
-
-
-
     )
   }
 
