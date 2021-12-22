@@ -23,7 +23,7 @@ export default class Dropdown extends Component {
 
         return (
             <div className='dropdown'>
-                <div className='dropdown__header d-flex justify-content-between'>
+                <div className='dropdown__header d-flex justify-content-between align-items-center'>
                     <span>
                        {dropdownTitle}  
                     </span>
@@ -31,7 +31,7 @@ export default class Dropdown extends Component {
                        ^
                    </div>
                 </div>
-                <div className='dropdown__content d-none'>
+                <div className='dropdown__content type- d-none'>
                     {content}
                 </div>
             </div>
