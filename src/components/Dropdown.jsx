@@ -22,14 +22,6 @@ export default class Dropdown extends Component {
             }
         }
 
-        let list 
-        if (typeof content === 'object') {
-                   return list = content.map((item) =>
-                    <li>{item}</li>
-                    );
-        }
-
-
         return (
             <div className='dropdown'>
                 <div className='dropdown__header d-flex justify-content-between align-items-center'>
@@ -44,7 +36,9 @@ export default class Dropdown extends Component {
 
                     {typeof(content) === 'object' ?
                     <ul>
-                        {list}
+                        {content.map((item) =>
+                    <li>{item}</li>
+                    )}
                     </ul>
                     :
                     <div>
