@@ -6,7 +6,6 @@ export default class Dropdown extends Component {
 
     render() {
         const content = this.props.content
-        console.log(content)
         const dropdownTitle = this.props.title
         
         function triggerDropdown(e) {

@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 // img
 import banner from '../../img/banner.png';
 // style sheet
-import '../../Styles/pages/home.scss'
+import '../../Styles/pages/_home.scss'
 
 export default class Home extends Component {
 
