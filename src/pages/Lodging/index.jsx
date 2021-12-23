@@ -4,6 +4,8 @@ import Dropdown from '../../components/Dropdown'
 import Tag from '../../components/Tag'
 // style sheet
 import lodging from '../../Styles/pages/_lodging.scss'
+//img
+import carrousel from '../../img/carrousel_one.png';
 
 export default class Error extends Component {
 
@@ -40,7 +42,13 @@ export default class Error extends Component {
 
 
         return (
-          <div>
+          <div className='wrapper'>
+            <div className='text-center'>
+              <img className='banner__img' src={carrousel} alt='banner' />
+            </div>
+
+            <div className='d-flex'>
+              <div>
               <h1>{lodgingData.title}</h1>
               <h2>{lodgingData.location}</h2>
               {lodgingData.tags ?
@@ -52,10 +60,25 @@ export default class Error extends Component {
                     :
                     <div>
                     </div>
-                    }
-              <Dropdown title='Description'  content={lodgingData.description} ></Dropdown>
-              <Dropdown title='Équipements'  content={lodgingData.equipments} ></Dropdown>
-              <div>{lodgingData.rating}</div>
+              }
+            </div>
+
+              <div>
+                <div>lodgingData.host</div>
+                <div>{lodgingData.rating}</div>
+              </div>
+
+
+
+            </div>
+
+
+
+              <div className='d-flex justify-content-between mt-4'>
+                <Dropdown title='Description'  content={lodgingData.description} ></Dropdown>
+                <Dropdown title='Équipements'  content={lodgingData.equipments} ></Dropdown>
+              </div>
+
           </div>
         )
       }
