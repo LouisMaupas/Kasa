@@ -27,6 +27,7 @@
         <li> React class components</li>
         <li> React Router V5</li>
         <li> Sass </li>
+        <li> No framework Carrousel </li>
         <li>Maquette <a href="https://www.figma.com/file/bAnXDNqRKCRRP8mY2gcb5p/UI-Design-Kasa-FR" target="_blank">figma</a></li>
         <li>ESLint & Prettier</li>
     </ul>
