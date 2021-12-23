@@ -4,10 +4,6 @@ import '../Styles/components/_dropdown.scss'
 
 export default class Dropdown extends Component {
 
-
-
-
-
     render() {
         const content = this.props.content
         console.log(content)
