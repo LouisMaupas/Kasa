@@ -7,11 +7,11 @@ import '../Styles/components/_footer.scss'
 export default class Footer extends Component {
     render() {
         return (
-            <footer>
-                <div>
+            <footer className='d-flex flex-column align-items-center'>
+                <div className='my-3'>
                     <img className='footer__logo' src={logo} alt='logo' />
                 </div>
-                <div>
+                <div className='my-3'>
                     © 2020 Kasa. All rights reserved
                 </div>
             </footer>
