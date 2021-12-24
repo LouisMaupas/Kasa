@@ -36,12 +36,12 @@ export default class About extends Component {
                 <img className='banner__img' src={banner} alt='banner' />
                 <div className='about__dropdowns d-flex flex-column align-items-center'>
                 {texts.length>0?
-            texts.map(elt => 
-                <Dropdown className="mt-4" title={`${elt.title}`} key={`${elt.id}`} content={`${elt.content}`}></Dropdown>
-            )
-            :
-            <p>Erreur serveur lors du chargement des logements.</p>
-        }
+                  texts.map(elt => 
+                            <Dropdown className="my-3" title={`${elt.title}`} key={`${elt.id}`} content={`${elt.content}`}></Dropdown>
+                          )
+                :
+                  <p>Erreur serveur lors du chargement des logements.</p>
+                }
               </div>
             </div>
         )
