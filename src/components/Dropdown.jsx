@@ -27,7 +27,7 @@ export default class Dropdown extends Component {
                        ^
                    </div>
                 </div>
-                <div className={`dropdown__content d-none`}>
+                <div className={`dropdown__content`}>
 
                     {typeof(content) === 'object' ?
                     <ul>

@@ -8,7 +8,6 @@ import lodging from '../../Styles/pages/_lodging.scss'
 import carrousel from '../../img/carrousel_one.png';
 
 export default class Error extends Component {
-
     constructor(props) {
         super(props)
         this.state = {
@@ -29,7 +28,6 @@ export default class Error extends Component {
            }
          })
      }
-    
       render() {
         const data = this.state.accomodation
         let lodgingData = {}
@@ -38,9 +36,6 @@ export default class Error extends Component {
             lodging.id === this.state.id.slice(1) ? lodgingData = lodging : console.log('pass')
           }
         }
-
-
-
         return (
           <div className='wrapper'>
             <div className='text-center'>
@@ -62,23 +57,15 @@ export default class Error extends Component {
                     </div>
               }
             </div>
-
               <div>
                 <div>lodgingData.host</div>
                 <div>{lodgingData.rating}</div>
               </div>
-
-
-
             </div>
-
-
-
               <div className='d-flex justify-content-between mt-4'>
                 <Dropdown title='Description'  content={lodgingData.description} ></Dropdown>
                 <Dropdown title='Équipements'  content={lodgingData.equipments} ></Dropdown>
               </div>
-
           </div>
         )
       }
