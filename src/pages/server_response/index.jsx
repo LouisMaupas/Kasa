@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link, NavLink  } from 'react-router-dom'
+import { NavLink  } from 'react-router-dom'
 // style sheet
 import server_response from '../../Styles/pages/_server_response.scss'
 

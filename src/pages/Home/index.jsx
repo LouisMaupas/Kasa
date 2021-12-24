@@ -1,7 +1,8 @@
 import { Component } from 'react'
-import data from '../../backend/data.json'
 import Thumbnails from '../../components/Thumbnails'
 import {Link} from "react-router-dom";
+// data
+import data from '../../backend/data.json'
 // img
 import banner from '../../img/banner.png';
 // style sheet
