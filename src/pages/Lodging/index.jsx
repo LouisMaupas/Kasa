@@ -87,14 +87,15 @@ export default class Error extends Component {
               }
             </div>
               <div>
-                <div>lodgingData.host</div>
-                début
+                <div className='d-flex'>
+                  {lodgingData.host ? lodgingData.host.name:'error'}
+                  {lodgingData.host ? <img className='pp' src={lodgingData.host.picture} />:'error'}
+                </div>
                 {lodgingData.rating ?
                 <div className='d-flex'>{getRatingStars(lodgingData.rating)}</div>
                 :
                 <div></div>
                 }
-                fin
               </div>
             </div>
               <div className='d-flex justify-content-between mt-4'>

@@ -1,16 +1,21 @@
+.pp {
+  width: 64px;
+  border-radius: 50%;
+}
+
 .carrousel {
  width: 1240px;
  overflow: hidden;
 }
 
 .slides {
-    width: calc(1250px*3);
-    animation: slide 10s infinite;
+  width: calc(1250px*3);
+  animation: slide 10s infinite;
   }
 
-  .slide {
-    float:left
-  }  
+.slide {
+  float:left
+}  
 
   @keyframes slide {
     0% {
