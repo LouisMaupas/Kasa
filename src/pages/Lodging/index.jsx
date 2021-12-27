@@ -73,8 +73,8 @@ export default class Error extends Component {
               <h2>{lodgingData.location}</h2>
               {lodgingData.tags ?
                     <div className='d-flex'>
-                        {lodgingData.tags.map((tag) =>
-                    <Tag content={tag}></Tag>
+                        {lodgingData.tags.map((tag, i) =>
+                    <Tag key={i} content={tag}></Tag>
                     )}
                     </div>
                     :

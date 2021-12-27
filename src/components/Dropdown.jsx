@@ -31,8 +31,8 @@ export default class Dropdown extends Component {
 
                     {typeof(content) === 'object' ?
                     <ul>
-                        {content.map((item) =>
-                    <li>{item}</li>
+                        {content.map((item, i) =>
+                    <li key={i}>{item}</li>
                     )}
                     </ul>
                     :
