@@ -8,6 +8,8 @@ import lodging from '../../Styles/pages/_lodging.scss'
 import carrouselOne from '../../img/carrousel_one.png';
 import carrouselTwo from '../../img/carrousel_two.png';
 import carrouselThree from '../../img/carrousel_three.png';
+import starFull from '../../img/star_full.png';
+import starEmpty from '../../img/star_empty.png';
 
 export default class Error extends Component {
     constructor(props) {
@@ -40,14 +42,16 @@ export default class Error extends Component {
         }
 
         const getRatingStars = score => {
+          let content = []
           let emptyStar = 5
           for(let i=0; i<score; i++) {
             emptyStar -= 1;
-            <div key={i}>Full</div>
+            content.push(<div key={i}><img src={starFull}></img></div>)
           }
           for(let i=0; i<emptyStar; i++) {
-            <div key={i}>Empty</div>
+            content.push(<div key={i}><img src={starEmpty}></img></div>)
           }
+          return content
         }
         console.log(getRatingStars(lodgingData.rating))
 
@@ -86,7 +90,7 @@ export default class Error extends Component {
                 <div>lodgingData.host</div>
                 début
                 {lodgingData.rating ?
-                <div>{getRatingStars(lodgingData.rating)}</div>
+                <div className='d-flex'>{getRatingStars(lodgingData.rating)}</div>
                 :
                 <div></div>
                 }
