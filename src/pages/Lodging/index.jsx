@@ -38,6 +38,21 @@ export default class Error extends Component {
             lodging.id === this.state.id.slice(1) ? lodgingData = lodging : console.log('pass')
           }
         }
+
+        const getRatingStars = score => {
+          let emptyStar = 5
+          for(let i=0; i<score; i++) {
+            emptyStar -= 1;
+            <div key={i}>Full</div>
+          }
+          for(let i=0; i<emptyStar; i++) {
+            <div key={i}>Empty</div>
+          }
+        }
+        console.log(getRatingStars(lodgingData.rating))
+
+
+
         return (
           <div className='wrapper d-flex flex-column'>
 
@@ -69,7 +84,13 @@ export default class Error extends Component {
             </div>
               <div>
                 <div>lodgingData.host</div>
-                <div>{lodgingData.rating}</div>
+                début
+                {lodgingData.rating ?
+                <div>{getRatingStars(lodgingData.rating)}</div>
+                :
+                <div></div>
+                }
+                fin
               </div>
             </div>
               <div className='d-flex justify-content-between mt-4'>
