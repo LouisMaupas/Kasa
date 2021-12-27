@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 // data
 import data from '../../backend/data.json'
 // img
-import banner from '../../img/banner.png';
+import banner from '../../img/home_banner.png';
 // style sheet
 import '../../Styles/pages/_home.scss'
 
