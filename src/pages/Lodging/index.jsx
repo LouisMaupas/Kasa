@@ -55,19 +55,20 @@ export default class Error extends Component {
         }
         console.log(getRatingStars(lodgingData.rating))
 
-
-
         return (
           <div className='wrapper d-flex flex-column'>
-
-
+            <div className='carrousel-left'> G </div>
+            <div className='carrousel-right'> D </div>
             <div className='carrousel mb-2'>
               <div className='slides'>
-                <div className='carrousel-left'> G </div>
-                <div className='carrousel-right'> D </div>
-                <div className="slide"><img src={carrouselOne} alt='banner' /></div>
-                <div className="slide"><img src={carrouselTwo} alt='banner' /></div>
-                <div className="slide"><img src={carrouselThree} alt='banner' /></div>
+                {lodgingData.pictures ? 
+                  <div className="slide">
+                    {lodgingData.pictures.map((pic, i) =>
+                      <img src={pic} alt='banner' />
+                      )}
+                  </div> 
+                  : <div>Erreur pas de réseau internet.</div>
+                }
               </div>
             </div>
 
@@ -84,13 +85,13 @@ export default class Error extends Component {
                       : <div></div>
                 }
               </div>
-              <div>
+              <div className='d-flex flex-column'>
                 <div className='d-flex align-items-center'>
                   {lodgingData.host ? <div className='lodging-host-name'>{lodgingData.host.name}</div>:'error'}
                   {lodgingData.host ? <img className='pp' src={lodgingData.host.picture} />:'error'}
                 </div>
                 {lodgingData.rating ?
-                <div className='d-flex'>{getRatingStars(lodgingData.rating)}</div>
+                <div className='d-flex justify-content-end justify-content-between'>{getRatingStars(lodgingData.rating)}</div>
                 :
                 <div></div>
                 }
