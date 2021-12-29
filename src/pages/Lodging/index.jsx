@@ -61,7 +61,7 @@ export default class Error extends Component {
           <div className='wrapper d-flex flex-column'>
 
 
-            <div className='carrousel'>
+            <div className='carrousel mb-2'>
               <div className='slides'>
                 <div className='carrousel-left'> G </div>
                 <div className='carrousel-right'> D </div>
@@ -73,22 +73,20 @@ export default class Error extends Component {
 
             <div className='d-flex justify-content-between'>
               <div>
-              <h1>{lodgingData.title}</h1>
-              <h2>{lodgingData.location}</h2>
-              {lodgingData.tags ?
-                    <div className='d-flex'>
-                        {lodgingData.tags.map((tag, i) =>
-                    <Tag key={i} content={tag}></Tag>
-                    )}
-                    </div>
-                    :
-                    <div>
-                    </div>
-              }
-            </div>
+                <div className='lodging-title'>{lodgingData.title}</div>
+                <div className='lodging-location'>{lodgingData.location}</div>
+                {lodgingData.tags ?
+                      <div className='d-flex'>
+                          {lodgingData.tags.map((tag, i) =>
+                      <Tag key={i} content={tag}></Tag>
+                      )}
+                      </div>
+                      : <div></div>
+                }
+              </div>
               <div>
-                <div className='d-flex'>
-                  {lodgingData.host ? lodgingData.host.name:'error'}
+                <div className='d-flex align-items-center'>
+                  {lodgingData.host ? <div className='lodging-host-name'>{lodgingData.host.name}</div>:'error'}
                   {lodgingData.host ? <img className='pp' src={lodgingData.host.picture} />:'error'}
                 </div>
                 {lodgingData.rating ?

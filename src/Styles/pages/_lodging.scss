@@ -1,11 +1,26 @@
+.lodging-host-name {
+  margin-right: 1rem;
+}
+
 .pp {
   width: 64px;
   border-radius: 50%;
 }
 
+.lodging-title {
+  font-size: 36px;
+}
+
+.lodging-location {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
 .carrousel {
+  height: 415px;
  width: 1240px;
  overflow: hidden;
+ border-radius: 25px;
 }
 
 .slides {
@@ -14,7 +29,7 @@
   }
 
 .slide {
-  float:left
+  float:left;
 }  
 
   @keyframes slide {
