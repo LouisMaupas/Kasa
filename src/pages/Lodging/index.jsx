@@ -71,7 +71,7 @@ export default class Error extends Component {
               </div>
             </div>
 
-            <div className='d-flex'>
+            <div className='d-flex justify-content-between'>
               <div>
               <h1>{lodgingData.title}</h1>
               <h2>{lodgingData.location}</h2>
