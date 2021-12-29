@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 // style sheet
 import '../Styles/components/_dropdown.scss'
+// img
+import arrow from '../img/arrow.png';
 
 export default class Dropdown extends Component {
 
@@ -10,6 +12,7 @@ export default class Dropdown extends Component {
         
         function triggerDropdown(e) {
             const currentDropdown = e.target.parentNode.parentNode.children[1]
+            console.log(currentDropdown)
             if (currentDropdown.classList.contains('d-none')) {
                 currentDropdown.classList.remove('d-none')
             } else {
@@ -24,7 +27,7 @@ export default class Dropdown extends Component {
                        {dropdownTitle}  
                     </span>
                    <div onClick={triggerDropdown} className='dropdown__trigger dropdown__trigger--closed'>
-                       ^
+                    <img src={arrow}></img>
                    </div>
                 </div>
                 <div className={`dropdown__content`}>

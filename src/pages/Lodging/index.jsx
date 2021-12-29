@@ -53,7 +53,6 @@ export default class Error extends Component {
           }
           return content
         }
-        console.log(getRatingStars(lodgingData.rating))
 
         return (
           <div className='wrapper d-flex flex-column'>
@@ -64,7 +63,7 @@ export default class Error extends Component {
                 {lodgingData.pictures ? 
                   <div className="slide">
                     {lodgingData.pictures.map((pic, i) =>
-                      <img src={pic} alt='banner' />
+                      <img key={i} src={pic} alt='banner' />
                       )}
                   </div> 
                   : <div>Erreur pas de réseau internet.</div>
