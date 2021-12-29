@@ -33,7 +33,7 @@ export default class About extends Component {
     render() {
         return (
             <div className='text-center'>
-                <img className='banner__img' src={banner} alt='banner' />
+                <img className='banner__img mt-4' src={banner} alt='banner' />
                 <div className='about__dropdowns d-flex flex-column align-items-center'>
                 {texts.length>0?
                   texts.map(elt => 
