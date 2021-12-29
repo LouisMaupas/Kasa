@@ -1,9 +1,21 @@
 .about__dropdowns > .dropdown {
-    width: 1023px;
+    max-width: 1023px;
     margin-bottom: 1rem;
     margin-top: 1rem;
 }
 
 .banner__img {
+    width: 100%;
+    height: auto;
+    object-fit: fill;
     border-radius: 25px;
+}
+
+.dropdown {
+    max-width: auto;
+}
+
+/* Mobile */
+@media (max-width: 705px) {
+
 }
