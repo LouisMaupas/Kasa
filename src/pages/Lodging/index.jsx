@@ -63,7 +63,7 @@ export default class Error extends Component {
                 {lodgingData.pictures ? 
                   <div className="slide">
                     {lodgingData.pictures.map((pic, i) =>
-                      <img key={i} src={pic} alt='banner' />
+                      <img className='carrousel-img' key={i} src={pic} alt='banner' />
                       )}
                   </div> 
                   : <div>Erreur pas de réseau internet.</div>
@@ -96,7 +96,7 @@ export default class Error extends Component {
                 }
               </div>
             </div>
-              <div className='d-flex justify-content-between mt-4'>
+              <div className='d-flex justify-content-between mt-4 details'>
                 <Dropdown title='Description'  content={lodgingData.description} ></Dropdown>
                 <Dropdown title='Équipements'  content={lodgingData.equipments} ></Dropdown>
               </div>

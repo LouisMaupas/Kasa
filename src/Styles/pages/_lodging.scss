@@ -16,6 +16,12 @@
   margin-bottom: 20px;
 }
 
+.details > div {
+  width: 50%;
+}
+
+/* CARROUSEL */
+
 .carrousel {
   height: 415px;
  width: 1240px;
@@ -30,7 +36,13 @@
 
 .slide {
   float:left;
-}  
+} 
+
+.carrousel-img {
+  width: 100%;
+  height: auto;
+  object-fit: fill;
+}
 
   @keyframes slide {
     0% {
