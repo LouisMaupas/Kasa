@@ -27,7 +27,7 @@ export default class Dropdown extends Component {
                        {dropdownTitle}  
                     </span>
                    <div onClick={triggerDropdown} className='dropdown__trigger dropdown__trigger--closed'>
-                    <img className='dropdown-arrow' src={arrowBottom}></img>
+                    <img className='dropdown-arrow' src={arrowBottom} alt='clickable dropdown'></img>
                    </div>
                 </div>
                 <div className={`dropdown__content`}>

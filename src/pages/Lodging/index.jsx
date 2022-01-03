@@ -8,9 +8,6 @@ import lodging from '../../Styles/pages/_lodging.scss';
 //img
 import starFull from '../../img/star_full.png';
 import starEmpty from '../../img/star_empty.png';
-import arrowLeft from '../../img/arrow_left.png';
-import arrowRight from '../../img/arrow_right.png';
-
 
 export default class Error extends Component {
     constructor(props) {
@@ -34,8 +31,6 @@ export default class Error extends Component {
          })
      }
 
-
-
       render() {
         const data = this.state.accomodation
         let lodgingData = {}
@@ -55,19 +50,17 @@ export default class Error extends Component {
           let emptyStar = 5
           for(let i=0; i<score; i++) {
             emptyStar -= 1;
-            content.push(<div key={'star'+i}><img src={starFull}></img></div>)
+            content.push(<div key={'star'+i}><img alt='rating-star' src={starFull}></img></div>)
           }
           for(let i=0; i<emptyStar; i++) {
-            content.push(<div key={'star'+i}><img src={starEmpty}></img></div>)
+            content.push(<div key={'star'+i}><img alt='rating-star' src={starEmpty}></img></div>)
           }
           return content
         }
 
-
-
         return (
           <div className='wrapper d-flex flex-column'>
-            <Carrousel images={lodgingData.pictures} ></Carrousel>
+            {lodgingData.pictures ? <Carrousel images={lodgingData.pictures} ></Carrousel> : null}
             <div className='d-flex justify-content-between'>
               <div>
                 <div className='lodging-title'>{lodgingData.title}</div>
@@ -79,18 +72,17 @@ export default class Error extends Component {
                       <Tag key={'tag'+i} content={tag}></Tag>
                       )}
                       </div>
-                      : <div></div>
+                      : null
                 }
               </div>
               <div className='d-flex flex-column'>
                 <div className='d-flex align-items-center'>
                   {lodgingData.host ? <div className='lodging-host-name'>{lodgingData.host.name}</div>:'error'}
-                  {lodgingData.host ? <img className='pp' src={lodgingData.host.picture} />:'error'}
+                  {lodgingData.host ? <img className='pp' alt='authors' src={lodgingData.host.picture} />:'error'}
                 </div>
                 {lodgingData.rating ?
                 <div className='d-flex justify-content-end justify-content-between'>{getRatingStars(lodgingData.rating)}</div>
-                :
-                <div></div>
+                : null
                 }
               </div>
             </div>
