@@ -45,6 +45,23 @@ height: 415px;
   object-fit: cover;
 }
 
+.carrousel-arrows {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  z-index: 1;
+  position: absolute;
+  top: 50%; 
+}
+
+.carrousel-left {
+  left: 0;
+}
+
+.carrousel-right {
+  right: 0;
+}
+
   @keyframes slide {
     0% {
         transform: translateX(0);

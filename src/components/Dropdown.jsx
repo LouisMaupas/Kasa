@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 // style sheet
 import '../Styles/components/_dropdown.scss'
 // img
-import arrow from '../img/arrow.png';
+import arrowBottom from '../img/arrow_bottom.png';
 
 export default class Dropdown extends Component {
 
@@ -27,7 +27,7 @@ export default class Dropdown extends Component {
                        {dropdownTitle}  
                     </span>
                    <div onClick={triggerDropdown} className='dropdown__trigger dropdown__trigger--closed'>
-                    <img className='dropdown-arrow' src={arrow}></img>
+                    <img className='dropdown-arrow' src={arrowBottom}></img>
                    </div>
                 </div>
                 <div className={`dropdown__content`}>

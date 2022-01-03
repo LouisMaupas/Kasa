@@ -7,6 +7,9 @@ import lodging from '../../Styles/pages/_lodging.scss'
 //img
 import starFull from '../../img/star_full.png';
 import starEmpty from '../../img/star_empty.png';
+import arrowLeft from '../../img/arrow_left.png';
+import arrowRight from '../../img/arrow_right.png';
+
 
 export default class Error extends Component {
     constructor(props) {
@@ -53,9 +56,11 @@ export default class Error extends Component {
 
         return (
           <div className='wrapper d-flex flex-column'>
-            <div className='carrousel-left'> G </div>
-            <div className='carrousel-right'> D </div>
+            {/* carrousel */}
+
             <div className='carrousel mb-2'>
+            <div className='carrousel-left carrousel-arrows'><img src={arrowLeft}/></div>
+            <div className='carrousel-right carrousel-arrows'><img src={arrowRight}/></div>
               <div className='slides'>
                 {lodgingData.pictures ? 
                     lodgingData.pictures.map((pic, i) =>
@@ -65,11 +70,11 @@ export default class Error extends Component {
                 }
               </div>
             </div>
-
             <div className='d-flex justify-content-between'>
               <div>
                 <div className='lodging-title'>{lodgingData.title}</div>
                 <div className='lodging-location'>{lodgingData.location}</div>
+                {/* Tags */}
                 {lodgingData.tags ?
                       <div className='d-flex'>
                           {lodgingData.tags.map((tag, i) =>
@@ -91,6 +96,7 @@ export default class Error extends Component {
                 }
               </div>
             </div>
+              {/* Dropdowns */}
               <div className='d-flex justify-content-between mt-4 details'>
                 <Dropdown title='Description'  content={lodgingData.description} ></Dropdown>
                 <Dropdown title='Équipements'  content={lodgingData.equipments} ></Dropdown>
