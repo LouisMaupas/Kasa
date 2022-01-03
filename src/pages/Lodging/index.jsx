@@ -5,9 +5,6 @@ import Tag from '../../components/Tag'
 // style sheet
 import lodging from '../../Styles/pages/_lodging.scss'
 //img
-import carrouselOne from '../../img/carrousel_one.png';
-import carrouselTwo from '../../img/carrousel_two.png';
-import carrouselThree from '../../img/carrousel_three.png';
 import starFull from '../../img/star_full.png';
 import starEmpty from '../../img/star_empty.png';
 
@@ -61,11 +58,9 @@ export default class Error extends Component {
             <div className='carrousel mb-2'>
               <div className='slides'>
                 {lodgingData.pictures ? 
-                  <div className="slide">
-                    {lodgingData.pictures.map((pic, i) =>
-                      <img className='carrousel-img' key={i} src={pic} alt='banner' />
-                      )}
-                  </div> 
+                    lodgingData.pictures.map((pic, i) =>
+                      <img className='carrousel-img slide' key={i} src={pic} alt='banner' />
+                      )
                   : <div>Erreur pas de réseau internet.</div>
                 }
               </div>

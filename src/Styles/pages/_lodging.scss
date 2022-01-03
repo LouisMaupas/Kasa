@@ -23,25 +23,26 @@
 /* CARROUSEL */
 
 .carrousel {
-  height: 415px;
- width: 1240px;
+height: 415px;
+ width: 100%;
  overflow: hidden;
  border-radius: 25px;
+ position: relative;
 }
 
 .slides {
-  width: calc(1250px*3);
+  // width: calc(1250px*3); => js 100%*imgs.lengths
+  width: 500%;
+  display: flex;
   animation: slide 10s infinite;
+  position: absolute;
+  top: 0;
+  left: 0;
   }
 
-.slide {
-  float:left;
-} 
-
 .carrousel-img {
-  width: 100%;
   height: auto;
-  object-fit: fill;
+  object-fit: cover;
 }
 
   @keyframes slide {
@@ -49,12 +50,12 @@
         transform: translateX(0);
     }
     33% {
-        transform: translateX(-1250px);
+        transform: translateX(-100%);
     }
     66% {
-        transform: translateX(-2500px);
+        transform: translateX(-200%);
     }
     100% {
-        transform: translateX(0px);
+        transform: translateX(0);
     }
   }
