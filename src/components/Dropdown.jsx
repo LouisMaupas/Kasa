@@ -11,7 +11,7 @@ export default class Dropdown extends Component {
         const dropdownTitle = this.props.title
         
         function triggerDropdown(e) {
-            const currentDropdown = e.target.parentNode.parentNode.children[1]
+            const currentDropdown = e.target.parentNode.parentNode.parentNode.children[1]
             console.log(currentDropdown)
             if (currentDropdown.classList.contains('d-none')) {
                 currentDropdown.classList.remove('d-none')
@@ -27,7 +27,7 @@ export default class Dropdown extends Component {
                        {dropdownTitle}  
                     </span>
                    <div onClick={triggerDropdown} className='dropdown__trigger dropdown__trigger--closed'>
-                    <img src={arrow}></img>
+                    <img className='dropdown-arrow' src={arrow}></img>
                    </div>
                 </div>
                 <div className={`dropdown__content`}>
