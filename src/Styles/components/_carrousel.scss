@@ -1,0 +1,53 @@
+.carrousel {
+    height: 415px;
+     width: 100%;
+     overflow: hidden;
+     border-radius: 25px;
+     position: relative;
+    }
+    
+    .slides {
+      // width: calc(1250px*3); => js 100%*imgs.lengths
+      width: 500%;
+      display: flex;
+      // animation: slide 10s infinite;
+      position: absolute;
+      top: 0;
+      left: 0;
+      }
+    
+    .carrousel-img {
+      height: auto;
+      object-fit: cover;
+    }
+    
+    .carrousel-arrows {
+      cursor: pointer;
+      z-index: 1;
+      position: absolute;
+      top: 15%;
+    }
+    
+    .carrousel-left {
+      left: 1.5rem;
+    }
+    
+    // TODO
+    .carrousel-right {
+      left: 19%;
+    }
+    
+      @keyframes slide {
+        0% {
+            transform: translateX(0);
+        }
+        33% {
+            transform: translateX(-100%);
+        }
+        66% {
+            transform: translateX(-200%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+      }

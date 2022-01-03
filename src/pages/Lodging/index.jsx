@@ -1,9 +1,10 @@
-import React, { Component } from 'react'
-import data from '../../backend/data.json'
-import Dropdown from '../../components/Dropdown'
-import Tag from '../../components/Tag'
+import React, { Component } from 'react';
+import data from '../../backend/data.json';
+import Dropdown from '../../components/Dropdown';
+import Carrousel from '../../components/Carrousel.jsx';
+import Tag from '../../components/Tag';
 // style sheet
-import lodging from '../../Styles/pages/_lodging.scss'
+import lodging from '../../Styles/pages/_lodging.scss';
 //img
 import starFull from '../../img/star_full.png';
 import starEmpty from '../../img/star_empty.png';
@@ -32,6 +33,9 @@ export default class Error extends Component {
            }
          })
      }
+
+
+
       render() {
         const data = this.state.accomodation
         let lodgingData = {}
@@ -59,32 +63,11 @@ export default class Error extends Component {
           return content
         }
 
-        /**
-         * Handle carrousel's img
-         * @param {*} index 
-         * @param {*} direction 
-         */
-        const carrouselTranslate = (index, direction) => {
-          console.log(index, direction)
-        }
+
 
         return (
           <div className='wrapper d-flex flex-column'>
-            {/* carrousel */}
-            <div className='carrousel mb-2'>
-              <div className='slides'>
-                {lodgingData.pictures ? 
-                    lodgingData.pictures.map((pic, i) =>
-                    <div>
-                      <div key={'arrow-left-'+i} onClick={carrouselTranslate(i, 'left')} className='carrousel-left carrousel-arrows'><img key={'arrow-left-img-'+i} src={arrowLeft}/></div>
-                      <div key={'arrow-right-'+i} onClick={carrouselTranslate(i, 'right')} className='carrousel-right carrousel-arrows'><img key={'arrow-left-img-'+i} src={arrowRight}/></div>
-                      <img className='carrousel-img slide' key={'carrousel-img-'+i} src={pic} alt='banner' />
-                    </div>  
-                      )
-                  : <div>Erreur pas de réseau internet.</div>
-                }
-              </div>
-            </div>
+            <Carrousel images={lodgingData.pictures} ></Carrousel>
             <div className='d-flex justify-content-between'>
               <div>
                 <div className='lodging-title'>{lodgingData.title}</div>
