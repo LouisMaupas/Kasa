@@ -20,10 +20,10 @@ export default class Error extends Component {
         }
       }
 
+    /**
+     * Fetch data from backend to state
+     */
     componentDidMount() {
-        /**
-         * Fetch data from backend to state
-         */
          fetch(data).then(res => {
            if (!res.ok) {
              throw new Error ('HTTP error' + Response.status)
@@ -41,30 +41,45 @@ export default class Error extends Component {
           }
         }
 
+        /**
+         * Display rating stars
+         * @param {*} score 
+         * @returns 
+         */
         const getRatingStars = score => {
           let content = []
           let emptyStar = 5
           for(let i=0; i<score; i++) {
             emptyStar -= 1;
-            content.push(<div key={i}><img src={starFull}></img></div>)
+            content.push(<div key={'star'+i}><img src={starFull}></img></div>)
           }
           for(let i=0; i<emptyStar; i++) {
-            content.push(<div key={i}><img src={starEmpty}></img></div>)
+            content.push(<div key={'star'+i}><img src={starEmpty}></img></div>)
           }
           return content
+        }
+
+        /**
+         * Handle carrousel's img
+         * @param {*} index 
+         * @param {*} direction 
+         */
+        const carrouselTranslate = (index, direction) => {
+          console.log(index, direction)
         }
 
         return (
           <div className='wrapper d-flex flex-column'>
             {/* carrousel */}
-
             <div className='carrousel mb-2'>
-            <div className='carrousel-left carrousel-arrows'><img src={arrowLeft}/></div>
-            <div className='carrousel-right carrousel-arrows'><img src={arrowRight}/></div>
               <div className='slides'>
                 {lodgingData.pictures ? 
                     lodgingData.pictures.map((pic, i) =>
-                      <img className='carrousel-img slide' key={i} src={pic} alt='banner' />
+                    <div>
+                      <div key={'arrow-left-'+i.toString()} onClick={carrouselTranslate(i, 'left')} className='carrousel-left carrousel-arrows'><img key={'arrow-left-img-'+i.toString()} src={arrowLeft}/></div>
+                      <div key={'arrow-right-'+i.toString()} onClick={carrouselTranslate(i, 'right')} className='carrousel-right carrousel-arrows'><img key={'arrow-left-img-'+i.toString()} src={arrowRight}/></div>
+                      <img className='carrousel-img slide' key={'carrousel-img-'+i.toString()} src={pic} alt='banner' />
+                    </div>  
                       )
                   : <div>Erreur pas de réseau internet.</div>
                 }
@@ -78,7 +93,7 @@ export default class Error extends Component {
                 {lodgingData.tags ?
                       <div className='d-flex'>
                           {lodgingData.tags.map((tag, i) =>
-                      <Tag key={i} content={tag}></Tag>
+                      <Tag key={'tag'+i} content={tag}></Tag>
                       )}
                       </div>
                       : <div></div>

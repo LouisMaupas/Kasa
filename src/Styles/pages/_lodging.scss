@@ -34,7 +34,7 @@ height: 415px;
   // width: calc(1250px*3); => js 100%*imgs.lengths
   width: 500%;
   display: flex;
-  animation: slide 10s infinite;
+  // animation: slide 10s infinite;
   position: absolute;
   top: 0;
   left: 0;
@@ -47,19 +47,18 @@ height: 415px;
 
 .carrousel-arrows {
   cursor: pointer;
-  width: 50px;
-  height: 50px;
   z-index: 1;
   position: absolute;
-  top: 50%; 
+  top: 15%;
 }
 
 .carrousel-left {
-  left: 0;
+  left: 1.5rem;
 }
 
+// TODO
 .carrousel-right {
-  right: 0;
+  left: 19%;
 }
 
   @keyframes slide {
