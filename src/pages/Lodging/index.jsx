@@ -76,9 +76,9 @@ export default class Error extends Component {
                 {lodgingData.pictures ? 
                     lodgingData.pictures.map((pic, i) =>
                     <div>
-                      <div key={'arrow-left-'+i.toString()} onClick={carrouselTranslate(i, 'left')} className='carrousel-left carrousel-arrows'><img key={'arrow-left-img-'+i.toString()} src={arrowLeft}/></div>
-                      <div key={'arrow-right-'+i.toString()} onClick={carrouselTranslate(i, 'right')} className='carrousel-right carrousel-arrows'><img key={'arrow-left-img-'+i.toString()} src={arrowRight}/></div>
-                      <img className='carrousel-img slide' key={'carrousel-img-'+i.toString()} src={pic} alt='banner' />
+                      <div key={'arrow-left-'+i} onClick={carrouselTranslate(i, 'left')} className='carrousel-left carrousel-arrows'><img key={'arrow-left-img-'+i} src={arrowLeft}/></div>
+                      <div key={'arrow-right-'+i} onClick={carrouselTranslate(i, 'right')} className='carrousel-right carrousel-arrows'><img key={'arrow-left-img-'+i} src={arrowRight}/></div>
+                      <img className='carrousel-img slide' key={'carrousel-img-'+i} src={pic} alt='banner' />
                     </div>  
                       )
                   : <div>Erreur pas de réseau internet.</div>
