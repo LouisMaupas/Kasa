@@ -54,10 +54,10 @@ export default class Error extends Component {
           let emptyStar = 5
           for(let i=0; i<score; i++) {
             emptyStar -= 1;
-            content.push(<div key={'star-full'+i}><img alt='rating-star' src={starFull}></img></div>)
+            content.push(<div key={'star-full'+i}><img className='logo-star' alt='rating-star' src={starFull}></img></div>)
           }
           for(let i=0; i<emptyStar; i++) {
-            content.push(<div key={'star-empty'+i}><img alt='rating-star' src={starEmpty}></img></div>)
+            content.push(<div key={'star-empty'+i}><img className='logo-star' alt='rating-star' src={starEmpty}></img></div>)
           }
           return content
         }
@@ -65,8 +65,8 @@ export default class Error extends Component {
         return (
           <div className='wrapper d-flex flex-column'>
             {lodgingData.pictures ? <Carrousel images={lodgingData.pictures} ></Carrousel> : null}
-            <div className='d-flex justify-content-between'>
-              <div>
+            <div className='lodging-details'>
+              <div className='lodging-address'>
                 <div className='lodging-title'>{lodgingData.title}</div>
                 <div className='lodging-location'>{lodgingData.location}</div>
                 {/* Tags */}
@@ -79,13 +79,13 @@ export default class Error extends Component {
                       : null
                 }
               </div>
-              <div className='d-flex flex-column'>
+              <div className='d-flex lodging-infos'>
                 <div className='d-flex align-items-center'>
                   {lodgingData.host ? <div className='lodging-host-name'>{lodgingData.host.name}</div>:'error'}
                   {lodgingData.host ? <img className='pp' alt='authors' src={lodgingData.host.picture} />:'error'}
                 </div>
                 {lodgingData.rating ?
-                <div className='d-flex justify-content-end justify-content-between'>{getRatingStars(lodgingData.rating)}</div>
+                <div className='stars-wrapper d-flex justify-content-end justify-content-between'>{getRatingStars(lodgingData.rating)}</div>
                 : null
                 }
               </div>

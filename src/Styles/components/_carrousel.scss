@@ -33,17 +33,29 @@
     .carrousel-right {
       left: 94%;
     }
+    
 
 /* Mobile */
 @media (max-width: 705px) {
+
+  .carrousel {
+    width: 335px;
+    height: 255px;
+  }
+
   .carrousel-arrows {
     top: 48%;
   }
 
-  .carrousel-right {
+  .carrousel-arrows-right {
     left: 25%;
   }
   .carrousel-arrows img {
     height: 19px;
+  }
+      
+  .carrousel-img {
+    width: 335px;
+    height: 255px;
   }
 }

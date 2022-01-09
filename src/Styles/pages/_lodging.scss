@@ -25,9 +25,21 @@
   width: 50%;
 }
 
+/* Desktop */
+@media (min-width: 706px) {
+  .lodging-details {
+    display: flex;
+    justify-content: space-between;
+  }
+  .lodging-infos{
+    flex-direction: column;
+  }
+}
+
 
 /* Mobile */
 @media (max-width: 705px) {
+
   .lodging-dropdowns {
     flex-direction: column;
     & > div {
@@ -35,4 +47,21 @@
       margin-bottom: 20px;
     }
   }
+
+    .lodging-details {
+      flex-direction: column;
+    }
+
+    .lodging-infos{
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+
+    .stars-wrapper {
+      align-items: center;
+    }
+
+    .logo-star{
+      height: 15px;
+    }
 }
