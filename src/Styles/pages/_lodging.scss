@@ -7,6 +7,11 @@
   border-radius: 50%;
 }
 
+.lodging-dropdowns {
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
 .lodging-title {
   font-size: 36px;
 }
@@ -18,4 +23,16 @@
 
 .details > div {
   width: 50%;
+}
+
+
+/* Mobile */
+@media (max-width: 705px) {
+  .lodging-dropdowns {
+    flex-direction: column;
+    & > div {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
 }

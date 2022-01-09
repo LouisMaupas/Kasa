@@ -91,7 +91,7 @@ export default class Error extends Component {
               </div>
             </div>
               {/* Dropdowns */}
-              <div className='d-flex justify-content-between mt-4 details'>
+              <div className='lodging-dropdowns d-flex details'>
                 <Dropdown title='Description'  content={lodgingData.description} ></Dropdown>
                 <Dropdown title='Équipements'  content={lodgingData.equipments} ></Dropdown>
               </div>

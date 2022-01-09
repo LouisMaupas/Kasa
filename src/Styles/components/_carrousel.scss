@@ -30,7 +30,20 @@
       left: 1.5rem;
     }
     
-    // TODO
     .carrousel-right {
       left: 94%;
     }
+
+/* Mobile */
+@media (max-width: 705px) {
+  .carrousel-arrows {
+    top: 48%;
+  }
+
+  .carrousel-right {
+    left: 25%;
+  }
+  .carrousel-arrows img {
+    height: 19px;
+  }
+}
