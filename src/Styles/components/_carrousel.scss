@@ -7,17 +7,15 @@
     }
     
     .slides {
-      // width: calc(1250px*3); => js 100%*imgs.lengths
-      width: 500%;
       display: flex;
-      // animation: slide 10s infinite;
       position: absolute;
       top: 0;
       left: 0;
       }
     
     .carrousel-img {
-      height: auto;
+      width: 1240px;
+      height: 415px;
       object-fit: cover;
     }
     
@@ -25,7 +23,7 @@
       cursor: pointer;
       z-index: 1;
       position: absolute;
-      top: 15%;
+      top: 36%;
     }
     
     .carrousel-left {
@@ -34,20 +32,5 @@
     
     // TODO
     .carrousel-right {
-      left: 19%;
+      left: 94%;
     }
-    
-      @keyframes slide {
-        0% {
-            transform: translateX(0);
-        }
-        33% {
-            transform: translateX(-100%);
-        }
-        66% {
-            transform: translateX(-200%);
-        }
-        100% {
-            transform: translateX(0);
-        }
-      }

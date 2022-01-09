@@ -50,10 +50,10 @@ export default class Error extends Component {
           let emptyStar = 5
           for(let i=0; i<score; i++) {
             emptyStar -= 1;
-            content.push(<div key={'star'+i}><img alt='rating-star' src={starFull}></img></div>)
+            content.push(<div key={'star-full'+i}><img alt='rating-star' src={starFull}></img></div>)
           }
           for(let i=0; i<emptyStar; i++) {
-            content.push(<div key={'star'+i}><img alt='rating-star' src={starEmpty}></img></div>)
+            content.push(<div key={'star-empty'+i}><img alt='rating-star' src={starEmpty}></img></div>)
           }
           return content
         }
