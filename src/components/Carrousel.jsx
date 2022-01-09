@@ -12,38 +12,16 @@ export default class Carrousel extends Component {
         this.state={index: 0, images : []}
     }
 
-    // moveSlide(e, direction) {
-    //     e.preventDefault();
-    //     const carrouselGallery = this.props.images;
-    //     let galleryLength = carrouselGallery.length - 1,
-    //     index = 1
-    //     for ()
-    //     // case : next
-    //     if(direction === 'next') {
-    //         if(index === galleryLength - 1) {
-    //              this.setState({index: 0})
-    //          } else {
-    //              this.setState({index: index + 1})
-    //          } 
-    //     // case : previous     
-    //     } else {
-    //         if(index < 1) {
-    //             this.setState({index: galleryLength})
-    //         } else {
-    //             this.setState({index: index - 1})
-    //         }
-    //     }
-    //     console.log(index)
-    // }
-
+    /**
+     * Get images from props and set state with.
+     */
     componentDidMount() {
         this.setState({images:this.props.images})
-        console.log(this.state.images)
     }
 
 
     /**
-     * 
+     * Manages carrousel arrows so that they can scroll the images 
      * @param {*} e 
      */
     moveSlide(e, direction) {
@@ -66,15 +44,12 @@ export default class Carrousel extends Component {
                  this.setState({index: index - 1})
              }
          }
-         console.log(index)
     }
 
     render() {
         const images = this.props.images
-        console.log(this.state.images)
         return (
             <div className='carrousel mb-2'>
-                {/* <div > */}
                      {images ? 
                         images.map((pic, i) =>
                         i === this.state.index ?
@@ -91,7 +66,6 @@ export default class Carrousel extends Component {
                         )
                         : <div>Erreur pas de réseau internet.</div>
                     } 
-                {/* </div> */}
             </div>
         )
     }
