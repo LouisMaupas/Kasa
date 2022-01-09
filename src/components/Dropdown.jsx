@@ -30,7 +30,7 @@ export default class Dropdown extends Component {
                     <img className='dropdown-arrow' src={arrowBottom} alt='clickable dropdown'></img>
                    </div>
                 </div>
-                <div className={`dropdown__content`}>
+                <div className='dropdown__content d-none'>
 
                     {typeof(content) === 'object' ?
                     <ul>
