@@ -3,7 +3,8 @@
 <div>
     <h2>Project's goal</h2>
 <p>
-    Project as part of my <a href="https://openclassrooms.com/fr/paths/516-developpeur-dapplication-javascript-react" target="_blank">openclassrooms training</a> : 
+    Project as part of my <a href="https://openclassrooms.com/fr/paths/516-developpeur-dapplication-javascript-react" target="_blank">openclassrooms training.</a>
+    <br/> 
     Create the web platform for the company KASA, specializing in the rental of apartments between individuals.
 </p>
     <h2>Features</h2>
@@ -18,7 +19,7 @@
         <li> React class components</li>
         <li> React Router V5</li>
         <li> Sass </li>
-        <li>Maquette <a href="https://www.figma.com/file/bAnXDNqRKCRRP8mY2gcb5p/UI-Design-Kasa-FR" target="_blank">figma</a></li>
+        <li>Model <a href="https://www.figma.com/file/bAnXDNqRKCRRP8mY2gcb5p/UI-Design-Kasa-FR" target="_blank">figma</a></li>
         <li>ESLint & Prettier</li>
     </ul>
 </div>
