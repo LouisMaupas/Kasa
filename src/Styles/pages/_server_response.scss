@@ -13,3 +13,18 @@
 .return-home{
     color: #FF6060;
 }
+
+/* Mobile */
+@media (max-width: 705px) {
+    .server_response_page {
+        height:68vh;
+        justify-content: center;
+    }
+
+    .http-code {
+        font-size: 96px;
+    }
+    .server-response{
+        font-size: 18px;
+    }
+}
