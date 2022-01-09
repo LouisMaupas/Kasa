@@ -31,12 +31,16 @@ export default class Error extends Component {
          })
      }
 
+     /**
+      * Get lodging data passed in url
+      * @returns 
+      */
       render() {
         const data = this.state.accomodation
         let lodgingData = {}
         if (data.length) {
           for (let lodging of data) {
-            lodging.id === this.state.id.slice(1) ? lodgingData = lodging : console.log('pass')
+            lodging.id === this.state.id.slice(1) ? lodgingData = lodging : console.log()
           }
         }
 
