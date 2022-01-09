@@ -15,7 +15,19 @@
     max-width: auto;
 }
 
+/* Desktop */
+@media (min-width: 705px) {
+
+}
+
 /* Mobile */
 @media (max-width: 705px) {
-
+    .about__dropdowns > .dropdown {
+        min-width: 100%;
+    }
+    .banner__img {
+        object-fit: cover;
+        width: 100%;
+        height: 255px;
+    }
 }
