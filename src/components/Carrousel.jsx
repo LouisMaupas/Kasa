@@ -79,8 +79,12 @@ export default class Carrousel extends Component {
                         images.map((pic, i) =>
                         i === this.state.index ?
                             <div className='slides' key={i}>
-                                <div onClick={(e) => {this.moveSlide(e, 'previous')}} className='carrousel-left carrousel-arrows'><img key={'arrow-left-img-'+i} src={arrowLeft} alt='carrousel'/></div>
-                                <div onClick={(e) => {this.moveSlide(e, 'next')}} className='carrousel-right carrousel-arrows'><img key={'arrow-left-img-'+i} src={arrowRight} alt='carrousel' /></div>
+                                {images.length === 1 ? <div></div> : 
+                                <div>
+                                    <div onClick={(e) => {this.moveSlide(e, 'previous')}} className='carrousel-left carrousel-arrows'><img key={'arrow-left-img-'+i} src={arrowLeft} alt='carrousel'/></div>
+                                    <div onClick={(e) => {this.moveSlide(e, 'next')}} className='carrousel-right carrousel-arrows'><img key={'arrow-left-img-'+i} src={arrowRight} alt='carrousel' /></div>
+                                </div>  
+                                }
                                 <img className='carrousel-img slide' src={pic} alt='banner' />
                             </div>  
                             : null
