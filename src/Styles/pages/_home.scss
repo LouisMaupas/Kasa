@@ -33,6 +33,9 @@
 @media (max-width: 705px) {
     .banner {
         height: 111px;
+        > img {
+            height: 111px;
+        }
         &__text {
             font-size: 24px;
         }
