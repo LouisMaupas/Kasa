@@ -9,7 +9,7 @@
 </p>
     <h2>Features</h2>
     <ul>
-        <li>A classic Single Page Application</li>
+        <li>A classic responsive Single Page Application</li>
         <li>No framework Carrousel</li>
         <li>No framework Dropdowns</li>
     </ul>
