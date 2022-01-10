@@ -23,9 +23,11 @@
         font-size: 48px;
     }
     > img {
+        max-height: 223px;
         min-width: 0;
-        object-fit: contain;
+        object-fit: cover;
         border-radius: 25px;
+            filter: brightness(50%);
     }
 }
 

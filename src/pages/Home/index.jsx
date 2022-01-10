@@ -36,8 +36,8 @@ export default class Home extends Component {
     return (
       <div className='wrapper'>
         <div className='banner'>
-          <div className='banner__text'>Chez&nbsp;vous, partout&nbsp;et&nbsp;ailleurs.</div>
           <img className='banner__img' src={banner} alt='banner' />
+          <div className='banner__text'>Chez&nbsp;vous, partout&nbsp;et&nbsp;ailleurs.</div>
         </div>
 
         <div className='main-display'>
