@@ -11,7 +11,6 @@
 
 .banner {
     text-align: center;
-    margin: 60px 0 43px 0;
     position: relative;
     width: 100%;
     &__text {
@@ -26,8 +25,15 @@
         max-height: 223px;
         min-width: 0;
         object-fit: cover;
-        border-radius: 25px;
+        border-radius: 15px;
         filter: brightness(50%);
+    }
+}
+
+/* Desktop */
+@media (min-width: 706px) {
+    .banner {
+        margin: 60px 0 43px 0;
     }
 }
 
@@ -35,6 +41,7 @@
 @media (max-width: 705px) {
     .banner {
         height: 111px;
+        margin: 1rem 0 -27px 0;
         > img {
             height: 111px;
         }
