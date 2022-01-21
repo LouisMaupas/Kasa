@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 import Dropdown from '../../components/Dropdown'
 // data
 import texts from '../../backend/texts.json'
-//style sheet
-import about from '../../Styles/pages/_about.scss'
 //img
 import banner from '../../img/about_banner.png';
 
