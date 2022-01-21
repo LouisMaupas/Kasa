@@ -16,10 +16,16 @@
     padding: 30px 20px;
 }
 
+
+
 /* DESKTOP */
 @media (min-width: 706px) {
-    .dropdown {
-        max-width: 582px;
+    .dropdown--about {
+        width: 1023px;
+    }
+
+    .dropdown--lodging {
+        width: 582px;
     }
 }
 

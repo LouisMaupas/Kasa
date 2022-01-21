@@ -35,7 +35,7 @@ export default class About extends Component {
                 <div className='about__dropdowns d-flex flex-column align-items-center'>
                 {texts.length>0?
                   texts.map(elt => 
-                            <Dropdown className="my-3" title={`${elt.title}`} key={`${elt.id}`} content={`${elt.content}`}></Dropdown>
+                            <Dropdown className="my-3" title={`${elt.title}`} key={`${elt.id}`} content={`${elt.content}`} page={'about'}></Dropdown>
                           )
                 :
                   <p>Erreur serveur lors du chargement des logements.</p>

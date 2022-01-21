@@ -21,10 +21,6 @@
   margin-bottom: 20px;
 }
 
-.details > div {
-  width: 50%;
-}
-
 /* Desktop */
 @media (min-width: 706px) {
   .lodging-details {
@@ -40,10 +36,13 @@
 /* Mobile */
 @media (max-width: 705px) {
 
+    .dropdown--lodging {
+      width: 582px;
+  }
+
   .lodging-dropdowns {
     flex-direction: column;
     & > div {
-      width: 100%;
       margin-bottom: 20px;
     }
   }

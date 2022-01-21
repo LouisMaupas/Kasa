@@ -3,8 +3,6 @@ import data from '../../backend/data.json';
 import Dropdown from '../../components/Dropdown';
 import Carrousel from '../../components/Carrousel.jsx';
 import Tag from '../../components/Tag';
-// style sheet
-import lodging from '../../Styles/pages/_lodging.scss';
 //img
 import starFull from '../../img/star_full.png';
 import starEmpty from '../../img/star_empty.png';
@@ -92,8 +90,8 @@ export default class Error extends Component {
             </div>
               {/* Dropdowns */}
               <div className='lodging-dropdowns d-flex details'>
-                <Dropdown title='Description'  content={lodgingData.description} ></Dropdown>
-                <Dropdown title='Équipements'  content={lodgingData.equipments} ></Dropdown>
+                <Dropdown title='Description'  content={lodgingData.description} page={'lodging'} ></Dropdown>
+                <Dropdown title='Équipements'  content={lodgingData.equipments} page={'lodging'} ></Dropdown>
               </div>
           </div>
         )
