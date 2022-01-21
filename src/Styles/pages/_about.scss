@@ -4,8 +4,6 @@
 }
 
 .banner__img {
-    width: 100%;
-    height: auto;
     object-fit: fill;
     border-radius: 25px;
     filter: brightness(50%);
@@ -17,7 +15,9 @@
 
 /* Desktop */
 @media (min-width: 705px) {
-
+    .banner__img {
+        width: 1240px;
+    }
 }
 
 /* Mobile */

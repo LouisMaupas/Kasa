@@ -1,6 +1,17 @@
-.wrapper {
-    max-width: 1240px;
-    margin: 0 100px;
+
+
+/* Desktop */
+@media (min-width: 705px) {
+    .wrapper {
+        max-width: 1240px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .app {
+        max-width: 1240px;
+        margin-right: auto;
+        margin-left: auto;
+    }
 }
 
 /* Mobile */
