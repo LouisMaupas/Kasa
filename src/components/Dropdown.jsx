@@ -18,21 +18,6 @@ export default class Dropdown extends Component {
                 currentDropdown.classList.add('d-none')
             }
         }
-        
-        // function triggerDropdown(e) {
-        //     const dropdownHeader = e.target.parentElement.parentElement
-        //     const contentDropdown = e.target.parentNode.parentNode.parentNode.children[1]
-
-        //     if (dropdownHeader.classList.contains('open')) {
-        //         dropdownHeader.classList.remove('open')
-        //         dropdownHeader.classList.add('closed')
-        //         contentDropdown.classList.add('d-none')
-        //     } else {
-        //         dropdownHeader.classList.remove('closed')
-        //         dropdownHeader.classList.add('open')
-        //         contentDropdown.classList.remove('d-none')
-        //     }
-        // }
 
         return (
             <div className='dropdown'>
