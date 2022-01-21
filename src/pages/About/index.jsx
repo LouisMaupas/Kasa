@@ -8,25 +8,6 @@ import banner from '../../img/about_banner.png';
 
 
 export default class About extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-          texts: {}
-        }
-      }
-
-    componentDidMount() {
-        /**
-         * Fetch data from backend to state
-         */
-         fetch(texts).then(res => {
-           if (!res.ok) {
-             throw new Error ('HTTP error' + Response.status)
-           } else {
-             this.setState({ accomodation:texts})
-           }
-         })
-     }
 
     render() {
         return (
