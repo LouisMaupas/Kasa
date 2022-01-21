@@ -9,16 +9,30 @@ export default class Dropdown extends Component {
     render() {
         const content = this.props.content
         const dropdownTitle = this.props.title
-        
+
         function triggerDropdown(e) {
             const currentDropdown = e.target.parentNode.parentNode.parentNode.children[1]
-            console.log(currentDropdown)
             if (currentDropdown.classList.contains('d-none')) {
                 currentDropdown.classList.remove('d-none')
             } else {
                 currentDropdown.classList.add('d-none')
             }
         }
+        
+        // function triggerDropdown(e) {
+        //     const dropdownHeader = e.target.parentElement.parentElement
+        //     const contentDropdown = e.target.parentNode.parentNode.parentNode.children[1]
+
+        //     if (dropdownHeader.classList.contains('open')) {
+        //         dropdownHeader.classList.remove('open')
+        //         dropdownHeader.classList.add('closed')
+        //         contentDropdown.classList.add('d-none')
+        //     } else {
+        //         dropdownHeader.classList.remove('closed')
+        //         dropdownHeader.classList.add('open')
+        //         contentDropdown.classList.remove('d-none')
+        //     }
+        // }
 
         return (
             <div className='dropdown'>
@@ -30,7 +44,7 @@ export default class Dropdown extends Component {
                     <img className='dropdown-arrow' src={arrowBottom} alt='clickable dropdown'></img>
                    </div>
                 </div>
-                <div className='dropdown__content d-none'>
+                <div className='dropdown__content'>
 
                     {typeof(content) === 'object' ?
                     <ul>
