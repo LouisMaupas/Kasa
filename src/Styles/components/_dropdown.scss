@@ -1,38 +1,35 @@
 .dropdown__header {
-    background-color: #FF6060;
-    color: white;
-    height: 52px;
-    border-radius: 5px;
-    padding: 0 20px;
-    font-size: 18px;
+  background-color: #ff6060;
+  color: white;
+  height: 52px;
+  border-radius: 5px;
+  padding: 0 20px;
+  font-size: 18px;
 }
 
 .dropdown__trigger {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .dropdown__content {
-    background-color: #f6f6f6;
-    padding: 30px 20px;
+  background-color: #f6f6f6;
+  padding: 30px 20px;
 }
-
 
 /* Small Desktop screen */
 @media (min-width: 705px) and (max-width: 1415px) {
-    .dropdown--lodging {
-        width: 48%;
-    }
+  .dropdown--lodging {
+    width: 48%;
+  }
 }
-
 
 /* DESKTOP */
 @media (min-width: 1416px) {
-    .dropdown--about {
-        width: 1023px;
-    }
+  .dropdown--about {
+    width: 1023px;
+  }
 
-    .dropdown--lodging {
-        width: 582px;
-    }
+  .dropdown--lodging {
+    width: 582px;
+  }
 }
-

@@ -1,43 +1,41 @@
 .header__logo {
-    width: 150px;
+  width: 150px;
 }
 
 #wrapper-header {
-    margin-top: 40px;
+  margin-top: 40px;
 }
 
 .active {
-    border-bottom: solid red;
+  border-bottom: solid red;
 }
 
 .header__nav {
-    display: flex;
-    height: 30px;
+  display: flex;
+  height: 30px;
 }
-
 
 /* Desktop only */
 @media (min-width: 1415px) {
-    .header__nav {
+  .header__nav {
     width: 320px;
     justify-content: space-between;
-    }
+  }
 }
 
 /* Small Desktop screen */
 @media (min-width: 705px) and (max-width: 1415px) {
-    .header__nav {
-        width: 250px;
+  .header__nav {
+    width: 250px;
     justify-content: space-between;
-    }
+  }
 }
 
 /* Mobile only */
 @media (max-width: 705px) {
-    .header__nav {
-        width: 50%;
-        font-size: 12px;
-        justify-content: space-evenly;
-
-    }
+  .header__nav {
+    width: 50%;
+    font-size: 12px;
+    justify-content: space-evenly;
+  }
 }
