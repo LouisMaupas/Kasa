@@ -19,7 +19,15 @@
 /* Desktop only */
 @media (min-width: 1415px) {
     .header__nav {
-        width: 320px;
+    width: 320px;
+    justify-content: space-between;
+    }
+}
+
+/* Small Desktop screen */
+@media (min-width: 705px) and (max-width: 1415px) {
+    .header__nav {
+        width: 250px;
     justify-content: space-between;
     }
 }
