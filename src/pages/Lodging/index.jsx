@@ -3,6 +3,8 @@ import data from '../../backend/data.json';
 import Dropdown from '../../components/Dropdown';
 import Carrousel from '../../components/Carrousel.jsx';
 import Tag from '../../components/Tag';
+// Router
+import { Redirect } from "react-router-dom";
 //img
 import starFull from '../../img/star_full.png';
 import starEmpty from '../../img/star_empty.png';
@@ -34,13 +36,24 @@ export default class Error extends Component {
       * @returns 
       */
       render() {
+
+        /**
+         * Router
+         */
         const data = this.state.accomodation
         let lodgingData = {}
         if (data.length) {
-          for (let lodging of data) {
-            lodging.id === this.state.id.slice(1) ? lodgingData = lodging : console.log()
+          const askedId = this.state.id.slice(1);
+          let isIdListed = false;
+          for (let lodging of data) { 
+            if(lodging.id === askedId) {
+              isIdListed = true;
+              lodgingData = lodging
+            }
           }
+          if (!isIdListed) <Redirect to='/404'/>
         }
+      
 
         /**
          * Display rating stars
