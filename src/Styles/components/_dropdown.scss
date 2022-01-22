@@ -17,9 +17,16 @@
 }
 
 
+/* Small Desktop screen */
+@media (min-width: 705px) and (max-width: 1415px) {
+    .dropdown--lodging {
+        width: 48%;
+    }
+}
+
 
 /* DESKTOP */
-@media (min-width: 706px) {
+@media (min-width: 1416px) {
     .dropdown--about {
         width: 1023px;
     }
