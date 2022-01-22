@@ -51,7 +51,9 @@ export default class Error extends Component {
               lodgingData = lodging
             }
           }
-          if (!isIdListed) <Redirect to='/404'/>
+          if (!isIdListed) {
+            return <Redirect to='/404'/>;
+          }
         }
       
 
