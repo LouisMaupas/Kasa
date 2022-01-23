@@ -12,21 +12,23 @@ export default class Dropdown extends Component {
         const page = this.props.page
 
         function triggerDropdown(e) {
-            const currentDropdown = e.target.parentNode.parentNode.parentNode.children[1]
-            if (currentDropdown.classList.contains('d-none')) {
-                currentDropdown.classList.remove('d-none')
+            e.stopPropagation();
+            const dropdownHeader = e.currentTarget
+            const dropdownContent = dropdownHeader.parentElement.children[1]
+            if (dropdownContent.classList.contains('d-none')) {
+                dropdownContent.classList.remove('d-none')
             } else {
-                currentDropdown.classList.add('d-none')
+                dropdownContent.classList.add('d-none')
             }
         }
 
         return (
             <div className={`dropdown dropdown--${page}`}>
-                <div className='dropdown__header d-flex justify-content-between align-items-center'>
+                <div onClick={triggerDropdown} className='dropdown__header d-flex justify-content-between align-items-center'>
                     <span>
                        {dropdownTitle}  
                     </span>
-                   <div onClick={triggerDropdown} className='dropdown__trigger dropdown__trigger--closed'>
+                   <div className='dropdown__trigger dropdown__trigger--closed'>
                     <img className='dropdown-arrow' src={arrowBottom} alt='clickable dropdown'></img>
                    </div>
                 </div>
