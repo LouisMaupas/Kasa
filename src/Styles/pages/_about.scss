@@ -1,29 +1,30 @@
 .about__dropdowns > .dropdown {
-    margin-bottom: 1rem;
-    margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 .banner__img {
-    object-fit: fill;
-    border-radius: 25px;
-    filter: brightness(50%);
+  object-fit: fill;
+  border-radius: 25px;
+  filter: brightness(50%);
 }
 
 /* Desktop */
 @media (min-width: 705px) {
-    .banner__img {
-        width: 1240px;
-    }
+  .banner__img {
+    max-width: 1240px;
+    width: 100%;
+  }
 }
 
 /* Mobile */
 @media (max-width: 705px) {
-    .about__dropdowns > .dropdown {
-        width: 335px;
-    }
-    .banner__img {
-        object-fit: cover;
-        width: 100%;
-        height: 255px;
-    }
+  .about__dropdowns > .dropdown {
+    width: 335px;
+  }
+  .banner__img {
+    object-fit: cover;
+    width: 100%;
+    height: 255px;
+  }
 }
