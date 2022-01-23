@@ -9,7 +9,10 @@ export default class Carrousel extends Component {
     
     constructor(props){
         super(props)
-        this.state={index: 0, images : []}
+        this.state={
+            index: 0, 
+            images : []
+        }
     }
 
     /**

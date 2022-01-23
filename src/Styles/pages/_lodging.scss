@@ -27,17 +27,15 @@
     display: flex;
     justify-content: space-between;
   }
-  .lodging-infos{
+  .lodging-infos {
     flex-direction: column;
   }
 }
 
-
 /* Mobile */
 @media (max-width: 705px) {
-
-    .dropdown--lodging {
-      width: 335px;
+  .dropdown--lodging {
+    width: 335px;
   }
 
   .lodging-dropdowns {
@@ -47,20 +45,20 @@
     }
   }
 
-    .lodging-details {
-      flex-direction: column;
-    }
+  .lodging-details {
+    flex-direction: column;
+  }
 
-    .lodging-infos{
-      flex-direction: row-reverse;
-      justify-content: space-between;
-    }
+  .lodging-infos {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
 
-    .stars-wrapper {
-      align-items: center;
-    }
+  .stars-wrapper {
+    align-items: center;
+  }
 
-    .logo-star{
-      height: 15px;
-    }
+  .logo-star {
+    height: 15px;
+  }
 }
