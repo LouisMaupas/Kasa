@@ -13,12 +13,6 @@
   left: 0;
 }
 
-.carrousel-img {
-  width: 1240px;
-  height: 415px;
-  object-fit: cover;
-}
-
 .carrousel-arrows {
   cursor: pointer;
   z-index: 1;
@@ -31,9 +25,19 @@
 }
 
 /* DESKTOP */
-@media (min-width: 1253px) {
+@media (min-width: 705px) {
   .carrousel-right {
-    left: 94%;
+    right: 10%;
+  }
+
+  .slides {
+    width: 100%;
+  }
+
+  .carrousel-img {
+    width: 1240px;
+    height: 415px;
+    object-fit: cover;
   }
 }
 
